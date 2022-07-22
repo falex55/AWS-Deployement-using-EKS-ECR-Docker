@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: car-price-prediction-service
+spec:
+  selector:
+    app: car-price-prediction
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 5000
+  type: NodePort
+#status:
+#  loadBalancer:
+#    ingress:
+#    - ip: 192.0.2.127
